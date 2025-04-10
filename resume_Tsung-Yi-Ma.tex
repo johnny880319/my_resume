@@ -1,5 +1,5 @@
 \documentclass[a4paper,10pt]{article}
-\usepackage[margin=0.8in]{geometry}
+\usepackage[margin=0.8in,top=0.5in]{geometry}  % Reduced top margin from 0.8in to 0.5in
 \usepackage{enumitem}
 \usepackage{hyperref}
 \usepackage{xeCJK} % For CJK fonts
@@ -19,10 +19,17 @@
 % Title and photo layout
 \begin{tabularx}{\textwidth}{lXr}
     \begin{minipage}[c]{0.6\textwidth} % Change [t] to [c] for vertical alignment
+        \vspace{0.5cm}
         {\LARGE \textbf{Tsung-Yi Ma}} \\
         \vspace{0.2cm}
-        \href{mailto:johnny880319@gmail.com}{johnny880319@gmail.com} \\
-        0979712027 \\
+        
+        \noindent
+        \includegraphics[height=1em]{icon/gmail.jpg}
+        \href{mailto:johnny880319@gmail.com}{johnny880319@gmail.com} \\  % Changed symbol
+        \includegraphics[height=1em]{icon/linkedin.png}
+        \href{linkedin.com/in/tsung-yi-ma-44bb6a268}{Tsung-Yi Ma} \\  % Added LinkedIn symbol
+        \includegraphics[height=1em]{icon/moblie_phone.jpg}
+        0979712027 \\  % Added phone symbol
     \end{minipage} &
     &
     \begin{minipage}[c]{0.3\textwidth} % Change [t] to [c] for vertical alignment
@@ -30,8 +37,14 @@
     \end{minipage}
 \end{tabularx}
 
-\vspace{0.5cm}
 
+\vspace{0.5cm}
+\noindent
+\textbf{Profile:} \\
+R\&D Engineer with a strong background in mathematics and practical experience in optimization, mathematical modeling, and AI. Passionate about using math and algorithms to solve real-world problems, especially in automation and intelligent systems.
+
+
+\vspace{0.5cm}
 \section*{Work Experience}
 \begin{tabularx}{\textwidth}{Xr}
     \textbf{Research \& Development Engineer, ASUSTEK COMPUTER INC.} & \textit{2023--present} \\
@@ -39,13 +52,14 @@
 \begin{itemize}[leftmargin=30pt]
     \item \textbf{Production Scheduling Optimization System:}
     \begin{itemize}
-        \item Utilized mathematical expertise to streamline the size of mathematical models, reducing execution time from over a day to within an hour.
-        \item Adapted original models to meet specific production rules and requirements.
+        \item Designed and optimized mathematical models (e.g., MIP/LP) using Python and CPLEX/SCIP for production scheduling problems.
+        \item Reduced execution time from over 24 hours to under 1 hour by minimizing model size and restructuring constraints.
+        \item Incorporated real-world production rules such as batch constraints and setup times into the optimization model.
     \end{itemize}
     \item \textbf{GAI Recruiter System:}
     \begin{itemize}
-        \item Implemented a sliding window approach to enable real-time speech recognition using the Whisper model.
-        \item Reduced error rates by leveraging contextual information and fine-tuning parameters such as \texttt{vad\_filter} and \texttt{no\_repeat\_ngram\_size}.
+        \item Implemented a real-time speech recognition module using OpenAI Whisper with a sliding window and context-aware aggregation.
+        \item Adjusted inference parameters such as \texttt{vad\_filter}, \texttt{beam\_size}, and \texttt{no\_repeat\_ngram\_size} based on experiments and online resources to reduce hallucination and improve transcription quality.
     \end{itemize}
 \end{itemize}
 
@@ -56,7 +70,7 @@
 \begin{itemize}[leftmargin=30pt]
     \item \textbf{Master's Thesis:} Introduction to the Ising Model and the Ising Model with Disorders:
     \begin{itemize}
-        \item Applied probability methods to investigate disordered statistical physics models.
+        \item Applied rigorous mathematical analysis to study statistical physics models, including phase transitions and disorder effects.
     \end{itemize}
     \item \textbf{Teaching Assistant:} Mathematical Analysis, Probability Theory.
     \item \textbf{Courses:}
@@ -84,15 +98,15 @@
 
 \section*{Awards}
 \begin{itemize}[leftmargin=30pt]
-    \item NCTS Undergraduate Summer Research Program.
-    \item Symposium for Young Analysts at National Central University.
     \item The Phi Tau Phi (斐陶斐) Scholastic Honor Society of the Republic of China Honorary Membership.
+    \item Symposium for Young Analysts at National Central University.
+    \item NCTS Undergraduate Summer Research Program.
 \end{itemize}
 
 \section*{}
 \begin{tabularx}{\textwidth}{X X}
     \textbf{Skills:} & \textbf{Hobbies:} \\
-    Python, C++, Git, Linux, SQL, \LaTeX & Juggling \\
+    Python, C++, C, Git, Linux, SQL, \LaTeX & Juggling \\
 \end{tabularx}
 
 \section*{Appendix}
@@ -104,7 +118,7 @@
             \fbox{\includegraphics[page=1,width=0.45\textwidth]{pdf_data/bachelor_certificate.pdf}} &
             \fbox{\includegraphics[page=1,width=0.45\textwidth]{pdf_data/symposium_young_analysts.pdf}} \\[1ex]
             \fbox{\includegraphics[page=1,width=0.45\textwidth]{pdf_data/NCTS_USRP.pdf}} &
-            \fbox{\includegraphics[page=1,width=0.45\textwidth]{pdf_data/good_grade.pdf}} \\
+            \fbox{\includegraphics[page=1,width=0.32\textwidth,angle=90]{pdf_data/class_of_science.pdf}}
         \end{tabular}
     \end{center}
 \end{document}
