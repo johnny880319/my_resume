@@ -53,7 +53,7 @@
 \raggedright
 \setlength{\tabcolsep}{0in}
 \setlength{\footskip}{4.08003pt}
-\setCJKmainfont[AutoFakeBold=true, AutoFakeSlant=true]{Microsoft JhengHei}
+\setCJKmainfont[AutoFakeBold=true, AutoFakeSlant=true]{Noto Sans CJK TC}
 
 % Sections formatting
 \titleformat{\section}{
@@ -115,7 +115,8 @@
     \href{https://github.com/johnny880319}{\underline{\faGithub \ johnny880319}} \quad \textbar \quad
     \href{https://rambling-blog.vercel.app}{\underline{\faGlobe \ Rambling Blog}} \\ \vspace{8pt}
     % Summary
-    \small \textit{Senior AI Engineer with a strong mathematical background (NTU Math). Specialized in Generative AI, Mathematical Optimization (MIP/LP), and Real-time Voice Interaction Systems. Recognized as a Top 1\% Performer (Global Role Model) at ASUS HQ for delivering high-impact AI projects.}
+    \small \textit{Senior AI Engineer with a strong mathematical background (NTU Math; Phi Tau Phi Honor Society). Focused on Generative AI, real-time speech systems, and mathematical optimization. ASUS Global Role Model Award recipient.}
+
 \end{center}
 
 
@@ -130,8 +131,8 @@
       {AI Engineer}{Nov. 2023 -- Aug. 2025}
       \resumeItemListStart
     %   2025 Global Role Model: Outstanding Contribution Award
-        \resumeItem{\textbf{2025 Global Role Model Award}: Selected for the \textbf{Outstanding Contribution Award} (HQ selection, Top $<$1\% rate company-wide) for exceptional performance and high-impact project delivery.}
-        \resumeItem{\textbf{AI Interview Agent (GAI Recruiter)}: Architected a real-time streaming speech recognition pipeline using \textbf{Python (Asyncio), Ray, and WebSockets}. Implemented a \textbf{sliding window approach} to achieve constant low latency ($<$500ms). Optimized inference parameters (VAD, beam size) to significantly reduce hallucinations.}
+        \resumeItem{\textbf{2025 Global Role Model Award}: Selected for the \textbf{Outstanding Contribution Award} (HQ selection, Top $<$1\% company-wide) for exceptional performance and high-impact project delivery.}
+        \resumeItem{\textbf{AI Interview Agent (GAI Recruiter)}: Architected a real-time streaming speech recognition pipeline using \textbf{Python (asyncio), Ray, and WebSockets}. Implemented a \textbf{sliding-window approach} to maintain sub-500 ms streaming latency. Optimized inference parameters (VAD, beam size) to significantly reduce hallucinations.}
         \resumeItem{\textbf{Production Scheduling Optimization}: Designed mathematical models (MIP/LP) using \textbf{CPLEX} and \textbf{SCIP} solvers. Restructured constraints to reduce execution time from \textbf{24+ hours to $<$1 hour}. Simulations validated a \textbf{10\% increase in production output} under raw material shortages compared to traditional FIFO methods.}
         \resumeItem{\textbf{License Plate Voice Recognition}: Fine-tuned \textbf{OpenAI Whisper} for specialized alphanumeric recognition, boosting accuracy to \textbf{$>$80\%}. Implemented on-the-fly data augmentation (A-law encoding, noise injection) to ensure model robustness.}
       \resumeItemListEnd
@@ -146,7 +147,7 @@
       {National Taiwan University}{Taipei, Taiwan}
       {Master of Mathematics}{Sep. 2021 -- Jun. 2023}
       \resumeItemListStart
-        \resumeItem{\textbf{The Phi Tau Phi Scholastic Honor Society}: Inducted as an Honorary Member (Typically awarded to the top 3\% of Master's graduates for academic distinction).}
+        \resumeItem{\textbf{The Phi Tau Phi Scholastic Honor Society}: Inducted as an Honorary Member, an academic distinction typically awarded to top Master's graduates.}
         \resumeItem{\textbf{CS Foundations}: Data Structures \& Algorithms (\textbf{A+}), Machine Learning (\textbf{A}). \textit{Self-study:} Operating Systems, Computer Networks, Computer Architecture.}
         \resumeItem{\textbf{Thesis}: ``Introduction to the Ising Model and the Ising Model with Disorders''. Applied rigorous analysis to statistical physics models.}
       \resumeItemListEnd
@@ -156,7 +157,6 @@
       {Bachelor of Mathematics}{Sep. 2017 -- Jun. 2021}
       \resumeItemListStart
         \resumeItem{\textbf{Research}: Selected for \textbf{NCTS Undergraduate Summer Research Program} (Noncommutative Probability).}
-        \resumeItem{\textbf{Industry Seminar}: Selected for the \textbf{Hon Hai Research Institute} study group, exploring connections between Non-commutative Probability and Quantum Information.}
         \resumeItem{\textbf{Honors Math}: Completed Honors tracks in Analysis, Algebra, Geometry, and Complex Analysis (Advanced curriculum replacing standard core requirements).}
       \resumeItemListEnd
 
@@ -167,29 +167,36 @@
 
 
 %-----------PROJECTS-----------
-
 \section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\textbf{Distributed Whisper Streaming} $|$ \emph{Python, Ray, faster-whisper}}{\href{https://github.com/johnny880319/whisper_streaming}{\underline{GitHub}}}
+          {\textbf{Distributed Whisper Streaming} $|$ \emph{Python, Ray, faster-whisper}}{\href{https://github.com/johnny880319/ray-whisper-streaming}{\underline{GitHub}}}
           \resumeItemListStart
-            \resumeItem{Re-architected the system using \textbf{Ray} and \textbf{RayQueue}, decoupling stateful audio processing and \textbf{hypothesis alignment} from heavy GPU-bound inference.}
-            \resumeItem{Solved the 1-to-1 memory bottleneck by multiplexing concurrent streams into a centralized GPU worker pool, maximizing resource utilization for production scaling.}
+            \resumeItem{Added a \textbf{RayQueue}-based routing layer to share GPU-bound Whisper inference workers across concurrent streaming sessions.}
           \resumeItemListEnd
+
+      \resumeProjectHeading
+    {\textbf{SQLite File Reader} $|$ \emph{Rust, SQLite storage internals, B-tree pages}}{\href{https://github.com/johnny880319/codecrafters-sqlite-rust}{\underline{GitHub}}}
+    \resumeItemListStart
+      \resumeItem{Built a read-only parser for SQLite database files, traversing table/index B-tree pages and decoding varints, record serial types, and schema entries for simple SELECT queries.}
+    \resumeItemListEnd
     \resumeSubHeadingListEnd
+
 
 
 %-----------PROGRAMMING SKILLS-----------
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: Python (Primary), C/C++, TypeScript/JavaScript, HTML/CSS, SQL} \\
-     \textbf{AI \& Optimization}{: PyTorch, OpenAI Whisper, Ray, CPLEX, SCIP} \\
-     \textbf{Backend \& Systems}{: FastAPI, Flask, Asyncio, WebSockets} \\
-     \textbf{Developer Tools}{: Git, VS Code, Linux, Tmux, Postman, Swagger, \LaTeX, uv} \\
-     \textbf{Code Quality}{: Ruff, Pyright, ESLint, Prettier}
+     \textbf{Languages}{: Python (Primary); project experience with Rust, Go, and TypeScript; basic SQL} \\
+     \textbf{AI \& Speech}{: PyTorch, OpenAI Whisper, faster-whisper, VAD, streaming inference} \\
+     \textbf{Optimization}{: Mathematical Programming, MIP/LP, CPLEX, SCIP} \\
+     \textbf{Backend \& Systems}{: FastAPI, async Python, WebSockets, Ray, Linux} \\
+     \textbf{Developer Tools}{: Git, Ruff, Pyright}
     }}
  \end{itemize}
+
+
 
 
 %-------------------------------------------
