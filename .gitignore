@@ -6,4 +6,10 @@
 *.synctex.gz
 *.xdv
 
+build/
+
+# In-place PDFs from editor builds (e.g. VSCode LaTeX Workshop building a variant
+# next to its source). The canonical output is build/ and the top-level resume.pdf.
+variants/**/*.pdf
+
 .codex

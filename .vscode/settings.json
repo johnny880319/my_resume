@@ -1,4 +1,6 @@
 {
+  "latex-workshop.latex.build.forceRecipeUsage": false,
+  "latex-workshop.latex.build.enableMagicComments": true,
   "latex-workshop.latex.autoBuild.run": "onSave",
   "latex-workshop.latex.recipe.default": "latexmk (xelatex)",
   "latex-workshop.view.pdf.viewer": "tab",
